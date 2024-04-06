@@ -28,12 +28,12 @@
         '';
         installPhase = ''
           mkdir -p $out/html
-          cp -R public $out/html
+          cp -r public $out/html
         '';
       };
 
       devShells.default = mkShell {
-        buildInputs = [ hugo ];
+        buildInputs = [ hugo go ];
       };
     }
   );
