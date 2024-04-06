@@ -23,9 +23,12 @@
         name = "homepage";
         src = ./.;
         buildInputs = [ hugo ];
+        buildPhase = ''
+          hugo
+        '';
         installPhase = ''
           mkdir -p $out/html
-          echo "ahoj" > $out/html/index.html
+          cp -R public $out/html
         '';
       };
 
