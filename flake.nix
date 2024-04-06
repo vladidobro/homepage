@@ -12,19 +12,25 @@
       type = "github";
       owner = "numtide";
       repo = "flake-utils";
+    };
   };
 
   outputs = { self, nixpkgs, flake-utils }:
   flake-utils.lib.eachDefaultSystem (system:
-    let pkgs = nixpkgs."${system}".legacyPackages;
+    let pkgs = nixpkgs.legacyPackages."${system}";
     in with pkgs; {
-      packages.site = stdenv.mkDerivation {
+      packages.default = stdenv.mkDerivation {
         name = "homepage";
-        src = ./src;
+        src = ./.;
+        buildInputs = [ hugo ];
         installPhase = ''
           mkdir -p $out/html
           echo "ahoj" > $out/html/index.html
         '';
+      };
+
+      devShells.default = mkShell {
+        buildInputs = [ hugo ];
       };
     }
   );
