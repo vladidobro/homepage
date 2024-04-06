@@ -22,13 +22,13 @@
       packages.default = stdenv.mkDerivation {
         name = "homepage";
         src = ./.;
-        buildInputs = [ hugo ];
+        buildInputs = [ hugo go ];
         buildPhase = ''
           hugo
         '';
         installPhase = ''
           mkdir -p $out/html
-          cp -r public $out/html
+          cp -a public/. $out/html
         '';
       };
 
