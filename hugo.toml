@@ -1,8 +1,5 @@
 baseURL = 'https://vladislav.wohlrath.cz/'
 languageCode = 'en-us'
 title = 'Coming soon'
-theme = 'github.com/theNewDynamic/gohugo-theme-ananke'
+theme = 'ananke'
 
-[module]
-[[module.imports]]
-    path = 'github.com/theNewDynamic/gohugo-theme-ananke'
