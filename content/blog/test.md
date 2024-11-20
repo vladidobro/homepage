@@ -1,7 +1,7 @@
 ---
 title: Test post
 date: 2024-11-17
-draft: true
+draft: false
 ---
 
 This is a lorem ipsum
