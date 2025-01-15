@@ -1,7 +1,8 @@
 ---
-title: Tutorial: legal wealth-based price discrimination
-author: Vladislav Wohlrath
-tags: economics tutorials discrimination enshittification
+title: Customer-friendly price discrimination
+date: 2024-11-20
+draft: true
+tags: ["economics", "tutorials", "discrimination", "enshittification"]
 ---
 
 Introduction
